@@ -2,27 +2,35 @@ package com.android.gajju45.bmicalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 public class ResultActivity extends AppCompatActivity {
-    TextView t1reslt, t2string;
+    TextView bmiDataTV, bmiStatusTV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
+        initViews();
 
-        t1reslt = (TextView) findViewById(R.id.t1reslt);
-        t2string = (TextView) findViewById(R.id.t2string);
+        //Result Obtain from Main Activity
+        Intent intent = getIntent();
+        Bundle extras = intent.getExtras();
+        Float bmiObtain = extras.getFloat("RESULT");
+        String bmiStatusObtain = extras.getString("TEXTBMI");
+        String bmiObtainString = Float.toString(bmiObtain);
+        bmiDataTV.setText(bmiObtainString);
+        bmiStatusTV.setText(bmiStatusObtain);
 
-        String Result = getIntent().getStringExtra("Result");
-        String strtextBmi = getIntent().getStringExtra("textBmi");
 
-        t1reslt.setText(Result);
-        t2string.setText("Yor BMI Resul is "+strtextBmi);
-        // txtInter.setText("text= "+key);
+    }
 
-
+    //Intialization Views
+    private void initViews() {
+        bmiDataTV = (TextView) findViewById(R.id.reult_data_tv);
+        bmiStatusTV = (TextView) findViewById(R.id.result_bmi_status_tv);
     }
 }

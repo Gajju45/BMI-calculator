@@ -10,19 +10,19 @@
 
 
     <RadioGroup
-        android:layout_marginTop="8dp"
-        android:id="@+id/rg"
+        android:id="@+id/main_radio_group"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:orientation="horizontal">
 
         <RadioButton
 
-            android:id="@+id/rb1"
+            android:id="@+id/main_men_rb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_marginEnd="8dp"
+            android:layout_weight="1"
             android:background="@drawable/radio_selector"
             android:button="@android:color/transparent"
             android:elevation="4dp"
@@ -32,7 +32,7 @@
             android:textColor="@drawable/text_color" />
 
         <RadioButton
-            android:id="@+id/rb2"
+            android:id="@+id/main_women_rb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -46,10 +46,10 @@
             android:textColor="@drawable/text_color" />
 
         <RadioButton
-            android:layout_marginStart="8dp"
-            android:id="@+id/rb3"
+            android:id="@+id/main_other_rb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:layout_weight="1"
             android:background="@drawable/radio_selector"
             android:button="@android:color/transparent"
@@ -62,18 +62,17 @@
     </RadioGroup>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_marginTop="12dp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
-
         android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
         android:hint="Age">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/age"
-            android:inputType="number"
+            android:id="@+id/main_age_tv"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:inputType="number" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -86,11 +85,11 @@
         android:hint="Weight">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edweg"
-            android:inputType="number"
-            android:drawableEnd="@drawable/ic_kg"
+            android:id="@+id/main_weight_tv"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_kg"
+            android:inputType="number" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -101,22 +100,23 @@
         android:hint="Height">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:drawableEnd="@drawable/ic_cm"
-            android:id="@+id/edhei"
-            android:inputType="number"
+            android:id="@+id/main_height_tv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:drawableEnd="@drawable/ic_cm"
+            android:inputType="number" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
-    <Button
-        android:id="@+id/btnresult"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/main_result_bt"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginTop="12dp"
         android:backgroundTint="#00796B"
-        android:text="result" />
+        android:text="result"
+        app:cornerRadius="10dp" />
 
     <TextView
         android:id="@+id/txtinter"
@@ -124,146 +124,33 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:gravity="center"
-        android:hint="data"
         android:padding="14dp"
         android:textColor="@color/white"
         android:textStyle="bold" />
 
     <TextView
-
         android:id="@+id/txtresult"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:gravity="center"
-        android:hint="BMI"
         android:padding="14dp"
         android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/btnres"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="22dp"
-        android:backgroundTint="#00796B"
-        android:text="Reset" />
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom">
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:padding="5dp"
-            android:text="Under Weight"
-            android:textColor="@color/under_weight"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/obese"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:padding="5dp"
-            android:text="18.5"
-            android:textColor="@color/under_weight"
-            android:textSize="18sp" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/main_try_again_bt"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom"
+            android:backgroundTint="#DF0739"
+            android:text="Try Again"
+            app:cornerRadius="10dp" />
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:padding="5dp"
-            android:text="Normal"
-            android:textColor="#42cd3a"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/normal"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:padding="5dp"
-            android:text="18.5-25"
-            android:textColor="#42cd3a"
-            android:textSize="18sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:padding="5dp"
-            android:text="Over Weight"
-            android:textColor="@color/over_weight"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/overweight"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:padding="5dp"
-            android:text="25-30"
-            android:textColor="@color/over_weight"
-            android:textSize="18sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:padding="5dp"
-            android:text="Obese"
-            android:textColor="@color/obese"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/morobese"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:padding="5dp"
-            android:text=">30"
-            android:textColor="@color/obese"
-            android:textSize="18sp" />
-    </LinearLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="4dp"
-        android:layout_marginBottom="8dp"
-        android:background="#FFBABABA" />
 </LinearLayout>
 
