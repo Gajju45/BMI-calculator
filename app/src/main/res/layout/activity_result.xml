@@ -46,27 +46,16 @@
         android:background="@drawable/result_text_bg"
         android:gravity="center"
         android:hint="BMI"
+        android:textColor="@color/white"
         android:padding="14dp"
         android:textStyle="bold" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/result_try_again_bt"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_gravity="bottom"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="16dp"
-        android:backgroundTint="#DF0739"
-        android:text="Try Again"
-        app:cornerRadius="10dp" />
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="50dp"
-        android:gravity="bottom"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
         android:orientation="vertical">
 
         <TextView
@@ -198,20 +187,23 @@
                 android:textColor="@color/obese"
                 android:textSize="18sp" />
         </LinearLayout>
+    </LinearLayout>
         <LinearLayout
-            android:layout_marginTop="22dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom">
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:gravity="bottom"
+            >
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/main_try_again_bt"
+                android:id="@+id/result_try_again_bt"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_gravity="bottom"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
                 android:backgroundTint="#DF0739"
                 android:text="Try Again"
-                app:cornerRadius="10dp" />
+                app:cornerRadius="10dp"  />
         </LinearLayout>
-    </LinearLayout>
 </LinearLayout>
