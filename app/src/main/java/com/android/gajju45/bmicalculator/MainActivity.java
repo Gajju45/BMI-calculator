@@ -15,7 +15,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     EditText weightET, heightET, ageET;
     TextView txtRes, txtInter;
-    Button btnRes, btnReset;
+    Button btnRes;
     RadioGroup rg;
     int gender = -1;
 
@@ -35,22 +35,8 @@ public class MainActivity extends AppCompatActivity {
         txtRes = (TextView) findViewById(R.id.txtresult);
 
 
-        btnReset = (Button) findViewById(R.id.main_try_again_bt);
         btnRes = (Button) findViewById(R.id.main_result_bt);
 
-        btnReset.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ageET.getText().clear();
-                heightET.getText().clear();
-                weightET.getText().clear();
-                txtInter.setText("");
-                txtRes.setText("");
-                txtInter.setBackgroundResource(R.color.white);
-
-                Toast.makeText(MainActivity.this, "Try Again BMI !!", Toast.LENGTH_SHORT).show();
-            }
-        });
 
         btnRes.setOnClickListener(new View.OnClickListener() {
             @Override
