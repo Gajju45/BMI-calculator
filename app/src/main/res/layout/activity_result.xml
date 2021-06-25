@@ -185,5 +185,20 @@
                 android:textColor="@color/obese"
                 android:textSize="18sp" />
         </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="22dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/main_try_again_bt"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="bottom"
+                android:backgroundTint="#DF0739"
+                android:text="Try Again"
+                app:cornerRadius="10dp" />
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>

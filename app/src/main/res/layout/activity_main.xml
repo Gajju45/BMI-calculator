@@ -119,6 +119,7 @@
         app:cornerRadius="10dp" />
 
     <TextView
+        android:visibility="gone"
         android:id="@+id/txtinter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -129,6 +130,7 @@
         android:textStyle="bold" />
 
     <TextView
+        android:visibility="gone"
         android:id="@+id/txtresult"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
